@@ -2,20 +2,23 @@
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Welcome to Your FIRST Vue.js App" /> -->
   <!-- <Counter /> -->
-  <AttributeBinding />
+  <!-- <AttributeBinding /> -->
+  <EventHandling />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue';
 // import Counter from './components/Counter.vue';
-import AttributeBinding from './components/AttributeBinding';
+// import AttributeBinding from './components/AttributeBinding';
+import EventHandling from './components/EventHandling';
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
     // Counter,
-    AttributeBinding,
+    // AttributeBinding,
+    EventHandling,
   },
 };
 </script>
