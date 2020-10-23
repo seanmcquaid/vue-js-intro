@@ -1,18 +1,21 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Welcome to Your FIRST Vue.js App" /> -->
-  <Counter />
+  <!-- <Counter /> -->
+  <AttributeBinding />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue';
-import Counter from './components/Counter.vue';
+// import Counter from './components/Counter.vue';
+import AttributeBinding from './components/AttributeBinding';
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
-    Counter,
+    // Counter,
+    AttributeBinding,
   },
 };
 </script>
