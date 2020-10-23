@@ -4,7 +4,8 @@
   <!-- <Counter /> -->
   <!-- <AttributeBinding /> -->
   <!-- <EventHandling /> -->
-  <TwoWayBinding />
+  <!-- <TwoWayBinding /> -->
+  <ConditionalRendering />
 </template>
 
 <script>
@@ -12,7 +13,8 @@
 // import Counter from './components/Counter.vue';
 // import AttributeBinding from './components/AttributeBinding';
 // import EventHandling from './components/EventHandling';
-import TwoWayBinding from './components/TwoWayBinding';
+// import TwoWayBinding from './components/TwoWayBinding';
+import ConditionalRendering from './components/ConditionalRendering';
 
 export default {
   name: 'App',
@@ -21,7 +23,8 @@ export default {
     // Counter,
     // AttributeBinding,
     // EventHandling,
-    TwoWayBinding,
+    // TwoWayBinding,
+    ConditionalRendering,
   },
 };
 </script>
