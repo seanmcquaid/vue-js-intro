@@ -3,14 +3,16 @@
   <!-- <HelloWorld msg="Welcome to Your FIRST Vue.js App" /> -->
   <!-- <Counter /> -->
   <!-- <AttributeBinding /> -->
-  <EventHandling />
+  <!-- <EventHandling /> -->
+  <TwoWayBinding />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue';
 // import Counter from './components/Counter.vue';
 // import AttributeBinding from './components/AttributeBinding';
-import EventHandling from './components/EventHandling';
+// import EventHandling from './components/EventHandling';
+import TwoWayBinding from './components/TwoWayBinding';
 
 export default {
   name: 'App',
@@ -18,7 +20,8 @@ export default {
     // HelloWorld,
     // Counter,
     // AttributeBinding,
-    EventHandling,
+    // EventHandling,
+    TwoWayBinding,
   },
 };
 </script>
