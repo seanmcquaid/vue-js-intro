@@ -6,9 +6,11 @@
   <!-- <EventHandling /> -->
   <!-- <TwoWayBinding /> -->
   <ConditionalRendering />
+  <ListRendering />
 </template>
 
 <script>
+import ListRendering from './components/ListRendering.vue';
 // import HelloWorld from './components/HelloWorld.vue';
 // import Counter from './components/Counter.vue';
 // import AttributeBinding from './components/AttributeBinding';
@@ -25,6 +27,7 @@ export default {
     // EventHandling,
     // TwoWayBinding,
     ConditionalRendering,
+    ListRendering,
   },
 };
 </script>
