@@ -1,6 +1,6 @@
 <template>
   <ol>
-    <li v-for="todo in todos" v-bind:key="todo">{{ todo.text }}</li>
+    <li v-for="(todo, index) in todos" v-bind:key="index">{{ todo.text }}</li>
   </ol></template
 >
 
