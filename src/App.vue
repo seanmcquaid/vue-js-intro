@@ -5,7 +5,7 @@
   <!-- <AttributeBinding /> -->
   <!-- <EventHandling /> -->
   <!-- <TwoWayBinding /> -->
-  <ConditionalRendering />
+  <ConditionalRendering v-for="n in 10" :key="n" />
   <ListRendering />
 </template>
 
