@@ -1,0 +1,22 @@
+KEEP TEMPLATES SIMPLE! 
+
+Create methods to compute value to abstract logic from templates
+
+example :
+
+instead of :
+
+<span>{{ author.books.length > 0 ? 'Yes' : 'No' }}</span>
+
+do : 
+
+computed: {
+    // a computed getter
+    publishedBooksMessage() {
+      // `this` points to the vm instance
+      return this.author.books.length > 0 ? 'Yes' : 'No'
+    }
+    // can also have computed setter
+  }
+
+computed = more performant and doesn't invoke the function OVER AND OVER unless one of the dependencies has changed
