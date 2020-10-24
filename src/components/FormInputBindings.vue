@@ -15,6 +15,27 @@
     <br />
     <span>Checked names: {{ checkedNames }}</span>
   </div>
+  <div id="v-model-select" class="demo">
+    <select v-model="selected">
+      <option disabled value="">Please select one</option>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+  </div>
+  <div id="v-model-select-dynamic" class="demo">
+    <select v-model="selected">
+      <option
+        v-for="option in options"
+        :value="option.value"
+        :key="option.value"
+      >
+        {{ option.text }}
+      </option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+  </div>
 </template>
 
 <script>
@@ -24,6 +45,12 @@ export default {
       message: '',
       checked: false,
       checkedNames: [],
+      selected: 'A',
+      options: [
+        { text: 'One', value: 'A' },
+        { text: 'Two', value: 'B' },
+        { text: 'Three', value: 'C' },
+      ],
     };
   },
 };
