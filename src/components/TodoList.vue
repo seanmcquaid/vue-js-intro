@@ -23,6 +23,9 @@
 <script>
 import TodoItem from './TodoItem';
 export default {
+  components: {
+    TodoItem,
+  },
   data() {
     return {
       newTodoText: '',

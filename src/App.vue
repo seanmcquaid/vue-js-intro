@@ -5,18 +5,20 @@
   <!-- <AttributeBinding /> -->
   <!-- <EventHandling /> -->
   <!-- <TwoWayBinding /> -->
-  <ConditionalRendering v-for="n in 10" :key="n" />
-  <ListRendering />
+  <!-- <ConditionalRendering v-for="n in 10" :key="n" />
+  <ListRendering /> -->
+  <ComponentExample />
 </template>
 
 <script>
-import ListRendering from './components/ListRendering.vue';
+import ComponentExample from './components/ComponentExample.vue';
+// import ListRendering from './components/ListRendering.vue';
 // import HelloWorld from './components/HelloWorld.vue';
 // import Counter from './components/Counter.vue';
 // import AttributeBinding from './components/AttributeBinding';
 // import EventHandling from './components/EventHandling';
 // import TwoWayBinding from './components/TwoWayBinding';
-import ConditionalRendering from './components/ConditionalRendering';
+// import ConditionalRendering from './components/ConditionalRendering';
 
 export default {
   name: 'App',
@@ -26,8 +28,10 @@ export default {
     // AttributeBinding,
     // EventHandling,
     // TwoWayBinding,
-    ConditionalRendering,
-    ListRendering,
+    // ConditionalRendering,
+    // ListRendering,
+    // Component,
+    ComponentExample,
   },
 };
 </script>
