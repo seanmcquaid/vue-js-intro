@@ -20,3 +20,5 @@ computed: {
   }
 
 computed = more performant and doesn't invoke the function OVER AND OVER unless one of the dependencies has changed
+
+slot = props.children in react
