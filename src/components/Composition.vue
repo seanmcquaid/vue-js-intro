@@ -1,36 +1,42 @@
 <script>
-// // src/components/UserRepositories.vue `setup` function
-// import { fetchUserRepositories } from '@/api/repositories'
-// import { ref, onMounted, watch, toRefs, computed } from 'vue'
+import { toRefs } from 'vue';
+import useUserRepositories from '@/composables/useUserRepositories';
+import useRepositoryNameSearch from '@/composables/useRepositoryNameSearch';
+import useRepositoryFilters from '@/composables/useRepositoryFilters';
 
-// // in our component
-// setup (props) {
-//   // using `toRefs` to create a Reactive Reference to the `user` property of props
-//   const { user } = toRefs(props)
+export default {
+  components: { RepositoriesFilters, RepositoriesSortBy, RepositoriesList },
+  props: {
+    user: {
+      type: String,
+      required: true,
+    },
+  },
+  setup(props) {
+    const { user } = toRefs(props);
 
-//   const repositories = ref([])
-//   const getUserRepositories = async () => {
-//     // update `props.user` to `user.value` to access the Reference value
-//     repositories.value = await fetchUserRepositories(user.value)
-//   }
+    const { repositories, getUserRepositories } = useUserRepositories(user);
 
-//   onMounted(getUserRepositories)
+    const {
+      searchQuery,
+      repositoriesMatchingSearchQuery,
+    } = useRepositoryNameSearch(repositories);
 
-//   // set a watcher on the Reactive Reference to user prop
-//   watch(user, getUserRepositories)
+    const {
+      filters,
+      updateFilters,
+      filteredRepositories,
+    } = useRepositoryFilters(repositoriesMatchingSearchQuery);
 
-//   const searchQuery = ref('')
-//   const repositoriesMatchingSearchQuery = computed(() => {
-//     return repositories.value.filter(
-//       repository => repository.name.includes(searchQuery.value)
-//     )
-//   })
-
-//   return {
-//     repositories,
-//     getUserRepositories,
-//     searchQuery,
-//     repositoriesMatchingSearchQuery
-//   }
-// }
+    return {
+      // Since we don’t really care about the unfiltered repositories
+      // we can expose the end results under the `repositories` name
+      repositories: filteredRepositories,
+      getUserRepositories,
+      searchQuery,
+      filters,
+      updateFilters,
+    };
+  },
+};
 </script>
