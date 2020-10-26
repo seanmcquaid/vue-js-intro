@@ -1,6 +1,7 @@
 <script>
+// // src/components/UserRepositories.vue `setup` function
 // import { fetchUserRepositories } from '@/api/repositories'
-// import { ref, onMounted, watch, toRefs } from 'vue'
+// import { ref, onMounted, watch, toRefs, computed } from 'vue'
 
 // // in our component
 // setup (props) {
@@ -18,9 +19,18 @@
 //   // set a watcher on the Reactive Reference to user prop
 //   watch(user, getUserRepositories)
 
+//   const searchQuery = ref('')
+//   const repositoriesMatchingSearchQuery = computed(() => {
+//     return repositories.value.filter(
+//       repository => repository.name.includes(searchQuery.value)
+//     )
+//   })
+
 //   return {
 //     repositories,
-//     getUserRepositories
+//     getUserRepositories,
+//     searchQuery,
+//     repositoriesMatchingSearchQuery
 //   }
 // }
 </script>
