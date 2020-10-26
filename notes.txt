@@ -22,3 +22,13 @@ computed: {
 computed = more performant and doesn't invoke the function OVER AND OVER unless one of the dependencies has changed
 
 slot = props.children in react
+
+example of lazy loading : 
+
+import { defineAsyncComponent } from 'vue'
+
+const AsyncComp = defineAsyncComponent(() =>
+  import('./components/AsyncComponent.vue')
+)
+
+app.component('async-component', AsyncComp)
