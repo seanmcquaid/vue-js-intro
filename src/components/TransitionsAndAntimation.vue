@@ -1,13 +1,12 @@
 <template>
   <div id="demo">
-    <div
-      @mousemove="xCoordinate"
-      :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }"
-      class="movearea"
-    >
-      <h3>Move your mouse across the screen...</h3>
-      <p>x: {{ x }}</p>
-    </div>
+    <button @click="show = !show">
+      Toggle
+    </button>
+
+    <transition name="fade">
+      <p v-if="show">hello</p>
+    </transition>
   </div>
 </template>
 
@@ -15,19 +14,20 @@
 export default {
   data() {
     return {
-      x: 0,
+      show: true,
     };
-  },
-  methods: {
-    xCoordinate(e) {
-      this.x = e.clientX;
-    },
   },
 };
 </script>
 
 <style>
-.movearea {
-  transition: 0.2s background-color ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
